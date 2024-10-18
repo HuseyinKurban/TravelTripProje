@@ -125,6 +125,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Siniflar\Admin.cs" />
+    <Compile Include="Models\Siniflar\Adres.cs" />
+    <Compile Include="Models\Siniflar\AnaSayfa.cs" />
+    <Compile Include="Models\Siniflar\Blog.cs" />
+    <Compile Include="Models\Siniflar\Hakkimizda.cs" />
+    <Compile Include="Models\Siniflar\iletisim.cs" />
+    <Compile Include="Models\Siniflar\Yorumlar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +160,44 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="web\about.html" />
+    <Content Include="web\contact.html" />
+    <Content Include="web\css\slider.css" />
+    <Content Include="web\css\style.css" />
+    <Content Include="web\destinations.html" />
+    <Content Include="web\images\about_banner.jpg" />
+    <Content Include="web\images\arrows.png" />
+    <Content Include="web\images\but.png" />
+    <Content Include="web\images\contact.png" />
+    <Content Include="web\images\dest_banner.jpg" />
+    <Content Include="web\images\flight.png" />
+    <Content Include="web\images\glass.png" />
+    <Content Include="web\images\group.png" />
+    <Content Include="web\images\hakkimizda.png" />
+    <Content Include="web\images\head_bg.jpg" />
+    <Content Include="web\images\head_bot.gif" />
+    <Content Include="web\images\img1.jpg" />
+    <Content Include="web\images\img2.jpg" />
+    <Content Include="web\images\img3.jpg" />
+    <Content Include="web\images\img4.jpg" />
+    <Content Include="web\images\key.png" />
+    <Content Include="web\images\link1-bg.gif" />
+    <Content Include="web\images\logo.png" />
+    <Content Include="web\images\pic.jpg" />
+    <Content Include="web\images\pic1.jpg" />
+    <Content Include="web\images\pic10.jpg" />
+    <Content Include="web\images\pic2.jpg" />
+    <Content Include="web\images\pic3.jpg" />
+    <Content Include="web\images\pic4.jpg" />
+    <Content Include="web\images\pic5.jpg" />
+    <Content Include="web\images\pic6.jpg" />
+    <Content Include="web\images\pic7.jpg" />
+    <Content Include="web\images\pic8.jpg" />
+    <Content Include="web\images\pic9.jpg" />
+    <Content Include="web\index.html" />
+    <Content Include="web\js\jquery.min.js" />
+    <Content Include="web\js\responsiveslides.min.js" />
+    <Content Include="web\w3layouts-License.txt" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -180,10 +225,10 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_TestLayout.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\About.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
