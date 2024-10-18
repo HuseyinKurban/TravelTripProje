@@ -6,7 +6,7 @@ using System.Web;
 
 namespace TravelTripProje.Models.Siniflar
 {
-    public class Adres
+    public class AdresBlog
     {
         [Key]
         public int Id { get; set; }
