@@ -1,4 +1,5 @@
-﻿
+﻿@using TravelTripProje.Models.Siniflar
+@model List<Blog>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_TestLayout.cshtml";
@@ -8,19 +9,19 @@
 <html>
 
 <body>
-    
+
     <div class="header-banner">
         <div class="wrap">
             <div class="banner">
                 <div class="indent">
-                    <h2 class="indent-left margin-bot">Plan the Easy Trip</h2>
+                    <h2 class="indent-left margin-bot">&nbsp&nbsp&nbsp Seyahatinizi Planlayın</h2>
                     <div class="banner-left">
                         <div class="con-text">
                             <div class="grid1-img">
                                 <img src="~/web/images/glass.png" alt="">
                             </div>
                             <div class="grid1-desc">
-                                <p>Restaurants</p>
+                                <p>Restoranlar</p>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -28,8 +29,9 @@
                             <div class="grid1-img">
                                 <img src="~/web/images/flight.png" alt="">
                             </div>
+                            
                             <div class="grid1-desc">
-                                <p>Flights</p>
+                                <p>Uçuşlar</p>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -38,7 +40,7 @@
                                 <img src="~/web/images/group.png" alt="">
                             </div>
                             <div class="grid1-desc">
-                                <p>Things to do</p>
+                                <p>Yapılacak Şeyler</p>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -47,22 +49,24 @@
                                 <img src="~/web/images/key.png" alt="">
                             </div>
                             <div class="grid1-desc">
-                                <p>Vacation Rents</p>
+                                <p>Araba Kiralama</p>
                             </div>
                             <div class="clear"></div>
                         </div>
                         <div class="clear"></div>
                     </div>
                     <div class="header_bottom_right_images">
-
-                        <div class="slider">
-                            <ul class="rslides" id="slider1">
-                                <li><img src="~/web/images/img1.jpg" alt=""></li>
-                                <li><img src="~/web/images/img2.jpg" alt=""></li>
-                                <li><img src="~/web/images/img3.jpg" alt=""></li>
-                                <li><img src="~/web/images/img4.jpg" alt=""></li>
+                        <div class="slider" style="height: 375px; width: 650px; overflow: hidden;">
+                            <ul class="rslides" id="slider1" style="padding: 0; margin: 0; list-style: none; height:400px;">
+                                @foreach (var x in Model)
+                                {
+                                    <li style="height: 375px; position: relative;">
+                                        <img src="@x.BlogImage" alt="" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                                    </li>
+                                }
                             </ul>
                         </div>
+
                     </div>
                 </div>
                 <div class="clear"></div>
@@ -74,51 +78,11 @@
         <div class="wrap">
             <div class="wrapper">
                 <div class="con-top">
-                    <h3>Welcome to our Travel Company!</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facil</p>
-                </div>
-                <div class="con-bot">
-                    <div class="left">
-                        <div class="bot-left">
-                            <img src="~/web/images/pic.jpg" alt="" />
-                        </div>
-                        <div class="left-text">
-                            <h4>test</h4>
-                            <span class="doller">$1021.99</span>
-                            <p>test</p>
-                            <p><a href="#"><span class="read">Read More</span></a></p>
-                        </div>
-                    </div>
+                    <h3>Tatil Seyahat Bloğuma Hoşgeldiniz</h3>
+                    <p>Gezip gördüğüm yerleri sizlerle paylaşmak için kodlamasını tamamen kendim yaptığım mvc5 üzerine kurulu dinamik bir web projesi geliştirdik. Hem Türkiye'den hem de yurt dışından gezip gördüğüm yerleri blog yazıları olarak sizlerle paylaşma niyetindeyim. Umuyorum ki yazdıklarımı beğenirsiniz, keyifli okumalar. </p>
                 </div>
 
-
-                <div class="left">
-                    <div class="bot-left">
-                        <img src="~/web/images/pic1.jpg" alt="" />
-                    </div>
-                    <div class="left-text">
-                        <h4>test</h4>
-                        <span class="doller">$1541.99</span>
-                        <p>test</p>
-                        <p><a href="#"><span class="read">Read More</span></a></p>
-                    </div>
-                </div>
-
-                <div class="con-bot">
-                    <div class="right">
-                        <div class="bot-left">
-                            <img src="~/web/images/pic2.jpg" alt="" />
-                        </div>
-                        <div class="left-text">
-                            <h4>test</h4>
-                            <span class="doller">$1241.99</span>
-                            <p>test</p>
-                            <p><a href="#"><span class="read">Read More</span></a></p>
-                        </div>
-                    </div>
-                </div>
-
-
+                @Html.Action("Partial1", "Default")
 
                 <div class="grids">
                     <div class="box1">
@@ -193,6 +157,6 @@
             </div>
         </div>
     </div>
-    
+
 </body>
 </html>
