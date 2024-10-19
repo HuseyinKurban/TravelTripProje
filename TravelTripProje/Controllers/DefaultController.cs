@@ -15,8 +15,8 @@ namespace TravelTripProje.Controllers
         public ActionResult Index()
         {
 
-            var deger = c.Blogs.ToList();
-            return View(deger);
+            var degerler = c.Blogs.OrderByDescending(x => x.ID).Take(5).ToList();
+            return View(degerler);
         }
 
         public ActionResult About()
@@ -38,6 +38,12 @@ namespace TravelTripProje.Controllers
                           .Take(1) // Sadece 1 öğe al
                           .ToList();
             return PartialView(degerler);
+        }
+
+        public PartialViewResult Partial3()
+        {
+            var deger = c.Blogs.ToList();
+            return PartialView(deger);
         }
 
   
