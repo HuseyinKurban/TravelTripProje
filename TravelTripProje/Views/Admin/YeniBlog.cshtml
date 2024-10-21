@@ -17,7 +17,7 @@
     @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
     <br />
     @Html.LabelFor(x => x.Aciklama)
-    @Html.TextAreaFor(x => x.Aciklama, 5, 0, new { @class = "form-control" })
+    @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control", rows = 10, style = "resize: none;" })
     <br />
 
     <button class="btn btn-primary">Ekle</button>
